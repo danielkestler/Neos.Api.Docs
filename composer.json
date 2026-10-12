@@ -1,0 +1,23 @@
+{
+    "name": "neos/api-docs",
+    "type": "neos-package",
+    "description": "Swagger UI for the Neos API, where users log in with their Neos account",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "neos/flow": "^9.0",
+        "neos/api": "@dev",
+        "neos/oauth": "@dev",
+        "neos/openapi-flowadapter": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neos\\Api\\Docs\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Neos.Api.Docs"
+        }
+    }
+}

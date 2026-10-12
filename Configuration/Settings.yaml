@@ -1,0 +1,25 @@
+Neos:
+  Api:
+    Docs:
+      # The OAuth client the docs log in with, declared in Neos.OAuth.clients below
+      clientId: "neos-api-docs"
+      swaggerUiVersion: "5.33.0"
+
+  OAuth:
+    protectedResources:
+      # Neos.Api's API, see Neos\Api\Infrastructure\Http\OAuthChallengeMiddleware::RESOURCE
+      "Neos.Api":
+        documentation: "api/docs"
+    clients:
+      # Swagger UI on /api/docs: users log in with their Neos account (authorization code flow with PKCE)
+      "neos-api-docs":
+        name: "Neos API docs"
+        redirectUris: ["{issuer}/api/docs/oauth2-redirect"]
+        grantTypes: ["authorization_code"]
+        firstParty: true
+
+  Flow:
+    mvc:
+      routes:
+        "Neos.Api.Docs":
+          position: "before Neos.Neos"
