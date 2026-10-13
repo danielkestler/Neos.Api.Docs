@@ -16,7 +16,6 @@ Neos:
         name: "Neos API docs"
         redirectUris: ["{issuer}/api/docs/oauth2-redirect"]
         grantTypes: ["authorization_code"]
-        firstParty: true
 
   Flow:
     mvc:
