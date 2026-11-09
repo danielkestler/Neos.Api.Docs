@@ -1,14 +1,14 @@
 {
-    "name": "neos/api-docs",
+    "name": "medienreaktor/neos-api-docs",
     "type": "neos-package",
     "description": "Swagger UI for the Neos API, where users log in with their Neos account",
     "license": "MIT",
     "require": {
         "php": "^8.4",
         "neos/flow": "^9.0",
-        "neos/api": "@dev",
-        "neos/oauth": "@dev",
-        "neos/openapi-flowadapter": "dev-main"
+        "medienreaktor/neos-api": "@dev",
+        "medienreaktor/neos-oauth": "@dev",
+        "neos/openapi-flowadapter": "*"
     },
     "autoload": {
         "psr-4": {
